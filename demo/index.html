@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style type="text/css">
+    *,
+    *:before,
+    *:after {
+        box-sizing: border-box
+    }
+    
+    .container {
+        font-size: 0;
+    }
+    
+    .origin-html {
+        vertical-align: top;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        font-size: 14px;
+        padding: 20px 40px;
+        background-color: #ccc;
+    }
+    
+    .origin-html:before {
+        content: '格式化前';
+    }
+    
+    .format-html {
+        vertical-align: top;
+        display: inline-block;
+        width: 50%;
+        height: 100%;
+        font-size: 14px;
+        padding: 20px 40px;
+        background-color: #ddd;
+    }
+    
+    .format-html:before {
+        content: '格式化后';
+    }
+    
+    .origin-html img,
+    .format-html img {
+        width: 100%;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="origin-html">
+            <h3>1. 空标签</h3>
+            <p></p>
+            <div></div>
+            <span></span>
+            <a href=""></a>
+            <br>
+            <h3>2. 空标签嵌套</h3>
+            <p><span></span></p>
+            <div>
+                <p><span><a href=""></a></span></p>
+            </div>
+        </div>
+        <pre class="format-html"></pre>
+    </div>
+    <script type="text/javascript" src="../dist/clean-html.js"></script>
+    <script>
+    var html = document.querySelector('.origin-html').innerHTML;
+
+    html = CleanHTML.clean(html);
+
+    document.querySelector('.format-html').innerHTML = html;
+    </script>
+</body>
+
+</html>

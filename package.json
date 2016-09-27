@@ -1,0 +1,32 @@
+{
+    "name": "clean-html",
+    "version": "1.0.0",
+    "description": "clean whitespace/emptyTag in html/string, can use in browser & nodejs",
+    "main": "index.js",
+    "scripts": {
+        "build": "WEBPACK_ENV=build webpack",
+        "dev": "WEBPACK_ENV=dev webpack --progress --colors --watch"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/qixiuss/clean-html.git"
+    },
+    "keywords": [
+        "clean html",
+        "html"
+    ],
+    "author": "P'unk Avenue LLC",
+    "license": "MIT",
+    "dependencies": {
+        "webpack": "^1.13.0",
+        "less": "^2.6.1",
+        "postcss-loader": "^0.8.2",
+        "less-loader": "^2.2.3"
+    },
+    "devDependencies": {
+        "webpack": "^1.13.0",
+        "less": "^2.6.1",
+        "postcss-loader": "^0.8.2",
+        "less-loader": "^2.2.3"
+    }
+}
