@@ -18,7 +18,7 @@ function regReplace(reg, newStr) {
     return count;
 }
 
-// 移除空白标签
+// 移除空标签
 function removeEmptyTag() {
     var tmp = text,
         isReplaceAvailable = true,
@@ -40,7 +40,7 @@ function removeEmptyTag() {
     return count;
 }
 
-// // 移除空白符
+// 移除空白符
 function removeWhiteSpace() {
     // 移除多余的空白符
     regReplace(/\s+/ig, " ");
